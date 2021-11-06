@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:paddingRight="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/hinh"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:id="@+id/name"
+            android:text="Chicken Tikka Biryani"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="26/02/2020"
+            android:textSize="12dp"
+            android:layout_marginTop="8dp"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Afghani Chicken Tikka Biryani Boneless fo 1"
+            android:textColor="#414042"
+            android:textSize="14dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="-263dp"
+            />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="360 đ"
+            android:textColor="#248E28"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="-200dp"
+            />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/button"
+            android:text="Đặt lại"
+            android:textColor="#ffffff"
+            android:layout_marginTop="80dp"
+            />
+
+</LinearLayout>

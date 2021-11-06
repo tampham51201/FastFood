@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#60BA62"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/lisa"
+                    app:civ_border_width="0dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Hãy gọi một món ăn,"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Mr.Lisa"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="75dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle">
+
+                    <TextView
+                        android:id="@+id/myCart"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="29dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/cart1" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp">
+
+                <EditText
+                    android:id="@+id/txtFind"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/edt_find"
+                    android:hint="Nhập món bạn muốn tìm.."
+                    android:fontFamily="@font/lato_regular"
+                    android:lines="1"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/textColor"
+                    android:textSize="16dp"
+                    tools:textColorHint="#716E6E" />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/search_btn" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="60dp">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:tabTextColor="#ffffff">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bữa sáng" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bữa trưa" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bữa tối" />
+                    </com.google.android.material.tabs.TabLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="350dp"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/edt_find">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewPage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="1dp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1050dp"
+                android:background="@drawable/card_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="11dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Món ăn nổi bật"
+                    android:textStyle="bold"
+                    android:textColor="#373b54"
+                    android:textSize="28sp"/>
+
+                <ListView
+                    tools:listitem="@layout/row_recycler"
+                    android:id="@+id/listViewHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/border_footer"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <RelativeLayout
+            android:id="@+id/btnHome"
+            android:layout_width="80dp"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/home_active" />
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:textColor="#60BA62"
+                android:textStyle="bold"
+                android:text="Trang Chủ" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/btnProduct"
+            android:layout_marginLeft="20dp"
+            android:layout_width="70dp"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/listproduct3" />
+
+            <TextView
+                android:id="@+id/txtProduct"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:text="Sản Phẩm" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/btnHistory"
+            android:layout_marginLeft="20dp"
+            android:layout_width="70dp"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_history_24" /> />
+
+            <TextView
+                android:id="@+id/txtHistory"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="40dp"
+                android:text="Lịch Sử" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnProfile1"
+            android:layout_marginLeft="20dp"
+            android:layout_width="70dp"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/icon_profile"/> />
+
+            <TextView
+                android:id="@+id/txtProfile"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="Cá Nhân" />
+        </RelativeLayout>
+        />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

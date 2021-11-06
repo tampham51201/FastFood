@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Activity.History">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardBackgroundColor="#62BA60"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/btnBackList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Lịch sử"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="360dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_search" />
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/border_footer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/border_footer"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <RelativeLayout
+                android:id="@+id/btnHome"
+                android:layout_width="70dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/home2" />
+
+                <TextView
+                    android:id="@+id/txtHome"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Trang Chủ" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/btnProduct"
+                android:layout_marginLeft="20dp"
+                android:layout_width="70dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/listproduct3" />
+                <TextView
+                    android:id="@+id/txtProduct"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center"
+                    android:text="Sản Phẩm" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/btnHistory"
+                android:layout_marginLeft="20dp"
+                android:layout_width="70dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/history_active" /> />
+
+                <TextView
+                    android:id="@+id/txtHistory"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_width="70dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/main"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Lịch Sử" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnProfile1"
+                android:layout_marginLeft="20dp"
+                android:layout_width="70dp"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/icon_profile"/> />
+
+                <TextView
+                    android:id="@+id/txtProfile"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Cá Nhân" />
+            </RelativeLayout>
+            />
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ListView
+            tools:listitem="@layout/layout_dong"
+            android:id="@+id/listviewLichSu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="3dp" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

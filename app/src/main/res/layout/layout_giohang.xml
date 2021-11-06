@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="35dp"
+        android:buttonTint="@color/main" />
+
+    <ImageView
+        android:id="@+id/imageviewAnh"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+         />
+
+    <LinearLayout
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/minusBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/numberOrderTxt"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:text="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="#373b54"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/plusBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/plus" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="5dp"
+        android:text="Burger King"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/packsize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="50dp"
+        android:text="SIZE"
+        android:textSize="14dp"
+        />
+
+    <TextView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="70dp"
+        android:text="0.2"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pretium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="50dp"
+        android:text="GIÁ"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/gia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="139dp"
+        android:text="50.000"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/gia_dv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="128dp"
+        android:text="đ"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="26dp"
+        android:text="TỔNG"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/txttong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="323dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="37dp"
+        android:text="0"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txttong_dv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="323dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="26dp"
+        android:text="đ"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

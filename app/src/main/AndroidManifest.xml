@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fastfoodapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FastFood"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FastFoodApp">
+        <activity
+            android:name=".Activity.History"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.ShowDetail"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.Profile"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.ListProduct"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.MyCart"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.Home"
+            android:exported="true" />
+        <activity android:name=".Activity.SignUp" />
+        <activity android:name=".Activity.Signin" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
