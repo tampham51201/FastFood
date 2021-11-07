@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fastfoodapp.R;
 
@@ -34,17 +35,17 @@ public class Signin extends AppCompatActivity {
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                String txtEmail=txtEmaillLogin.getText().toString();
-//                String txtPassword=txtPassLogin.getText().toString();
-//                if(txtEmail.equals("admin@gmail.com")  && txtPassword.equals("admin"))
-//                {
-//                    startActivity(new Intent(Signin.this, Home.class));
-//                }
-//                else{
-//                    Toast.makeText(Signin.this, "Email or Password is incorrect!", Toast.LENGTH_SHORT).show();
-//                }
-                Intent intent =new Intent(Signin.this,Home.class);
-                startActivity(intent);
+                String txtEmail=txtEmaillLogin.getText().toString();
+                String txtPassword=txtPassLogin.getText().toString();
+                if(txtEmail.equals("admin@gmail.com")  && txtPassword.equals("admin"))
+                {
+                    startActivity(new Intent(Signin.this, Home.class));
+                }
+                else{
+                    Toast.makeText(Signin.this, "Email or Password is incorrect!", Toast.LENGTH_SHORT).show();
+                }
+//                Intent intent =new Intent(Signin.this,Home.class);
+//                startActivity(intent);
             }
         });
 

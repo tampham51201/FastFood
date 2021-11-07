@@ -91,7 +91,7 @@
                     android:paddingLeft="20dp"
                     android:textColor="@color/textColor"
                     android:textSize="16dp"
-                    tools:textColorHint="#716E6E" />
+                    tools:textColorHint="@color/textColor" />
 
                 <TextView
                     android:layout_width="30dp"
@@ -130,9 +130,9 @@
 
 
                     <LinearLayout
-                        android:layout_width="350dp"
+                        android:layout_width="380dp"
                         android:layout_height="130dp"
-                        android:layout_marginLeft="6dp"
+                        android:layout_gravity="center"
                         android:layout_marginTop="12dp"
                         android:background="@drawable/edt_find">
 
