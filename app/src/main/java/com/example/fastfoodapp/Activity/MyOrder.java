@@ -5,42 +5,36 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.fastfoodapp.Adapter.GiohangAdapter;
+import com.example.fastfoodapp.Adapter.OrderAdapter;
 import com.example.fastfoodapp.Object.MonAn;
 import com.example.fastfoodapp.R;
 import com.example.fastfoodapp.databinding.ActivityMyCartBinding;
-
+import com.example.fastfoodapp.databinding.ActivityMyOrderBinding;
 
 import java.util.ArrayList;
 
-public class MyCart extends AppCompatActivity {
+public class MyOrder extends AppCompatActivity {
 
-    ActivityMyCartBinding binding;
-
-    TextView btnBack,numberOrderTxt;
-    Button btnOrder;
-    private int numberOrder = 1;
-    private ImageView plusBtn, minusBtn;
-
+    ActivityMyOrderBinding binding;
+    LinearLayout btnAddress,btnCheckOut;
+    TextView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMyCartBinding.inflate(getLayoutInflater());
+
+        binding = ActivityMyOrderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
 
-        cainaylaNut();
-
 
         String[] ten ={"Bánh donut","Bánh sandwich","Xúc xích"};
-        int[] hinh = {R.drawable.donut,R.drawable.sw,R.drawable.xucxich};
+        int[] hinh = {R.drawable.donut,R.drawable.xucxich,R.drawable.donut};
         String[] calo ={"200","200","200"};
         String[] size= {"S","S","S"};
         String[] gia= {"50000","50000","50000"};
@@ -57,7 +51,6 @@ public class MyCart extends AppCompatActivity {
         int[] anhBon={R.drawable.xalach,R.drawable.xalach,R.drawable.xalach};
         int[] quantity={1,3,2};
 
-
         ArrayList<MonAn> monAnArrayList = new ArrayList<>();
 
         for(int i=0;i<hinh.length;i++){
@@ -66,51 +59,28 @@ public class MyCart extends AppCompatActivity {
             monAnArrayList.add(monAn);
         }
 
-        GiohangAdapter giohangAdapter = new GiohangAdapter(MyCart.this,monAnArrayList);
-        binding.lvGiohang.setAdapter(giohangAdapter);
-        binding.lvGiohang.setClickable(true);
-        binding.lvGiohang.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        btnAddress=(LinearLayout) findViewById(R.id.btnAddress);
+        btnAddress.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent =new Intent(MyCart.this,ShowDetail.class);
-                intent.putExtra("ten",ten[i]);
-                intent.putExtra("hinh",hinh[i]);
-                intent.putExtra("calo",calo[i]);
-                intent.putExtra("sao",sao[i]);
-                intent.putExtra("size",size[i]);
-                intent.putExtra("gia",gia[i]);
-                intent.putExtra("tong",tong[i]);
-                intent.putExtra("Mota",Mota[i]);
-                intent.putExtra("anhMot",anhMot[i]);
-                intent.putExtra("anhHai",anhHai[i]);
-                intent.putExtra("anhBa",anhBa[i]);
-                intent.putExtra("anhBon",anhBon[i]);
-
-                startActivity(intent);
-
+            public void onClick(View view) {
+                startActivity(new Intent(MyOrder.this, Address.class));
             }
         });
-
-    }
-
-    private void display(int number) {
-        numberOrderTxt.setText("number");
-    }
-
-    private void cainaylaNut() {
+        btnCheckOut=(LinearLayout) findViewById(R.id.btnCheckOut);
+        btnCheckOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MyOrder.this, CheckOut.class));
+            }
+        });
         btnBack=(TextView) findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MyCart.this, Home.class));
+                startActivity(new Intent(MyOrder.this, MyCart.class));
             }
         });
-        btnOrder=(Button) findViewById(R.id.btnOrder);
-        btnOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MyCart.this, MyOrder.class));
-            }
-        });
+        OrderAdapter orderApdapter = new OrderAdapter(MyOrder.this,monAnArrayList);
+        binding.myOrder.setAdapter(orderApdapter);
     }
 }

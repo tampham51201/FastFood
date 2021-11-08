@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastFoodApp">
         <activity
+            android:name=".Activity.CheckOut"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.Address"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.MyOrder"
+            android:exported="true" />
+        <activity
             android:name=".Activity.History"
             android:exported="true" />
         <activity

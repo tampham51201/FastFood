@@ -97,8 +97,7 @@ public class GiohangAdapter extends ArrayAdapter<MonAn> {
 
 
                 if(count <= 1) {
-                    count = 1;
-                    txtTong=txtTong;
+                    remove(monAn);
                 }
                 else {
                     count -= 1;

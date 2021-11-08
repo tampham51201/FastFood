@@ -38,7 +38,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+
             android:layout_weight="1"
             android:gravity="center"
             android:text="Tạo tài khoản để tiếp tục!"
@@ -52,7 +52,7 @@
         android:layout_width="357dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <TextView
@@ -71,7 +71,7 @@
             <EditText
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/edit_radius"
                 android:paddingLeft="50dp"
@@ -93,7 +93,7 @@
         android:layout_width="357dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical">
         <TextView
             android:id="@+id/labelName"
@@ -111,7 +111,7 @@
             <EditText
                 android:id="@+id/txtName"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/edit_radius"
                 android:paddingLeft="50dp"
@@ -134,7 +134,7 @@
         android:layout_width="357dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical">
         <TextView
             android:id="@+id/labelPass1"
@@ -152,7 +152,7 @@
             <EditText
                 android:id="@+id/txtPass"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/edit_radius"
                 android:inputType="textPassword"
@@ -192,7 +192,7 @@
         android:layout_width="357dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical">
         <TextView
             android:id="@+id/labelPass"
@@ -210,7 +210,7 @@
             <EditText
                 android:id="@+id/txtPass1"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/edit_radius"
                 android:inputType="textPassword"
@@ -253,11 +253,11 @@
         android:layout_gravity="center"
         android:layout_marginTop="14dp"
         android:button="@drawable/custom_checkbox"
-        android:minHeight="48dp"
+        android:minHeight="30dp"
         android:paddingLeft="5dp"
         android:text="Bạn đồng ý với chính sách và điêu kiện  không?"
         android:textColor="@color/textColor"
-        android:textSize="18dp" />
+        android:textSize="16dp" />
 
     <Button
         android:id="@+id/signUp"
@@ -270,7 +270,7 @@
         android:textColor="@color/white"/>
 
     <LinearLayout
-        android:layout_width="235dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
@@ -278,7 +278,7 @@
 
         <TextView
             android:id="@+id/labelacc"
-            android:layout_width="155dp"
+            android:layout_width="138dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Đã có tài khoản?"
@@ -288,7 +288,7 @@
 
         <TextView
             android:id="@+id/btnSignin"
-            android:layout_width="134dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Đăng nhập"
@@ -298,6 +298,9 @@
 
 
     </LinearLayout>
+
+
+
 
 
 

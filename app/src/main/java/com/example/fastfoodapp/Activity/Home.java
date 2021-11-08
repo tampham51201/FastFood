@@ -26,13 +26,15 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class Home extends AppCompatActivity {
 
     ActivityHomeBinding binding;
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-
+    CircleImageView profile_image;
     TextView myCart;
     RelativeLayout btnProfile,btnHistory,btnProduct;
 
@@ -146,6 +148,16 @@ public class Home extends AppCompatActivity {
                 startActivity(new Intent(Home.this, History.class));
             }
         });
+
+
+        profile_image=(CircleImageView) findViewById(R.id.profile_image);
+        profile_image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Home.this, Profile.class));
+            }
+        });
+
     }
 
 

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="130dp"
     android:paddingRight="10dp"
+
     android:descendantFocusability="blocksDescendants"
     android:paddingLeft="10dp">
 
@@ -13,58 +14,85 @@
             android:layout_height="100dp"
             android:layout_marginTop="15dp"
             />
-        <TextView
-            android:id="@+id/name"
-            android:text="Chicken Tikka Biryani"
-            android:layout_marginTop="10dp"
-            android:layout_width="200dp"
-            android:layout_height="30dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginLeft="10dp"
-            />
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:text="26/02/2020"
-            android:textSize="12dp"
-            android:layout_marginTop="8dp"
-            />
 
-        <TextView
-            android:id="@+id/description"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="Afghani Chicken Tikka Biryani Boneless fo 1"
-            android:textColor="#414042"
-            android:textSize="14dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="-263dp"
-            />
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="360 đ"
-            android:textColor="#248E28"
-            android:textSize="23dp"
-            android:textStyle="bold"
-            android:layout_marginTop="80dp"
-            android:layout_marginLeft="-200dp"
-            />
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginBottom="6dp"
-            android:background="@drawable/button"
-            android:text="Đặt lại"
-            android:textColor="#ffffff"
-            android:layout_marginTop="80dp"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="190dp"
+        android:gravity="center|left"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Chicken Tikka Biryani"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                           android:gravity="center"
+                            android:text="26/02/2020"
+                            android:textSize="12dp"
+
+                            />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Afghani Chicken Tikka Biryani Boneless fo 1"
+                    android:textColor="#414042"
+                    android:textSize="14dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:id="@+id/price"
+                            android:layout_width="181dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center|left"
+                            android:text="360 đ"
+                            android:textColor="#248E28"
+                            android:textSize="22dp"
+                            android:textStyle="bold"
+
+                            />
+                        <Button
+                            android:id="@+id/button2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+
+                            android:background="@drawable/button"
+                            android:text="Đặt lại"
+                            android:textColor="#ffffff"
+
+                            />
+
+                </LinearLayout>
+
+
+        </LinearLayout>
 
 </LinearLayout>
